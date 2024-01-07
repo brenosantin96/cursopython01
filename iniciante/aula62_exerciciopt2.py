@@ -27,8 +27,12 @@ O segundo dígito do CPF é 0
 
 # 74682489070
 
+import re
+
 cpf = input("Digite seu CPF: ")
 cpf_09_primeiros_digitos = cpf[:9]
+
+
 
 fatores_01 = [10, 9, 8, 7, 6, 5, 4, 3, 2]
 fatores_02 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
