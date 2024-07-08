@@ -5,7 +5,7 @@ Retorno de valores das funções (return)
 
 def soma(x, y):
     if x > 10:
-        return [10, 20]
+        return [10, 20] #retornando uma tupla
     return x + y
 
 
