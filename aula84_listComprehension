@@ -1,0 +1,47 @@
+import pprint
+
+def p(v):
+    pprint.pprint(v, sort_dicts=False, width=40)
+
+lista = []
+
+for numero in range(10):
+    lista.append(numero)
+#print(lista)
+
+
+
+
+lista = [numero * 2
+         for numero in range(10)]
+#print(lista)
+    
+    
+#Mapeamento de dados em list comprehension
+
+produtos = [
+    {'nome' : 'p1', 'preco' : 20},
+    {'nome' : 'p2', 'preco' : 10},
+    {'nome' : 'p3', 'preco' : 40},
+    {'nome' : 'p4', 'preco' : 50},
+]
+
+#primeira apresentamos o que vai ser retornado, nesse caso estamos retornando todo o produto com **produto e logo alterando o preco dos produtos para 1.5
+#na linha do meio que é opcional estamos criando um if onde vai aplicar a primeira linha
+#ultima linha apresentamos onde realizar esse for
+
+#o que vem na esquerda do FOR é MAPEAMENTO
+#o que vem na direita do FOR é FILTRO
+
+novos_produtos = [
+    {**produto, 'preco': produto['preco'] * 1.5}
+    if produto['preco'] > 20 else {**produto}
+    for produto in produtos
+    if (produto['preco'] * 1.05 ) >= 20
+]
+
+print(*novos_produtos, sep='\n')
+
+
+
+

@@ -10,8 +10,8 @@
 # s1 = set('Luiz')
 
 
-s1 = set('Breno')
-s2 = {'Breno', 'Santin'}
+s1 = set("Breno")
+s2 = {"Breno", "Santin"}
 print(s1, type(s1))
 print(s2, type(s2))
 
@@ -41,3 +41,35 @@ print(numeros)
 # intersecção & (intersection) - Itens presentes em ambos
 # diferença - Itens presentes apenas no set da esquerda
 # diferença simétrica ^ - Itens que não estão em ambos
+
+
+setNomes = {"Breno", "Itala", "Bruno"}
+setNomes.add("Joao")
+setNomes.add("Inacio")
+setNomes.add("Ingrid")
+
+setNomes.discard
+
+
+# Usando um loop for para remover nomes que começam com 'I'
+nomes_para_remover = {nome for nome in setNomes if nome.startswith("I")}
+
+for nome in nomes_para_remover:
+    setNomes.remove(nome)
+
+
+print(setNomes)
+print(type(setNomes))
+
+
+
+setNumeros01 = {1,2,3}
+setNUmeros02 = {2,3,4}
+
+setNumeros03Pipe = setNumeros01 | setNUmeros02
+setNumeros03And = setNumeros01 & setNUmeros02
+setNumeros03Minus = setNumeros01 - setNUmeros02
+
+print("setNumeros03Pipe", setNumeros03Pipe)
+print("setNumeros03And", setNumeros03And)
+print("setNumeros03Minus", setNumeros03Minus)
